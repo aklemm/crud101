@@ -21,4 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/user-profiles', function() {
+    return 'Did you get my screen time request?';
+});
+
 require __DIR__.'/auth.php';
