@@ -22,7 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/user-profiles', function() {
-    return 'Did you get my screen time request?';
+    return App\Models\UserProfile::get();
 });
 
 require __DIR__.'/auth.php';
