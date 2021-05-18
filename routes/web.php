@@ -21,8 +21,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/user-profiles', function() {
-    return App\Models\UserProfile::get();
-});
+Route::get('/user-profiles', App\Http\Controllers\UserProfiles\IndexController::class);
 
 require __DIR__.'/auth.php';
