@@ -13,4 +13,12 @@ class UserProfileIndexRouteTest extends TestCase
         $response = $this->get('/user-profiles');
         $response->assertStatus(200);
     }
+
+    public function test_controller_is_UserProfiles_IndexController()
+    {
+        $response = $this->get('/user-profiles');
+        $actual = get_class(\Route::current()->getController());
+        $expected = 'App\Http\Controllers\UserProfiles\IndexController';
+        $this->assertSame($expected, $actual);
+    }
 }
