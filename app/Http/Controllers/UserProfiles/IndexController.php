@@ -14,8 +14,13 @@ class IndexController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, IndexQuery $query)
+    //public function __invoke(Request $request, IndexQuery $query)
+    //{
+    //    return $query->getData();
+    //}
+
+    public function __invoke()
     {
-        return $query->getData();
+        return view('user_profiles');
     }
 }
