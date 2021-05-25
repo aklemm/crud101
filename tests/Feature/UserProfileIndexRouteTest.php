@@ -26,7 +26,7 @@ class UserProfileIndexRouteTest extends TestCase
     {
         $indexQueryMock = \Mockery::mock(IndexQuery::class);
         $indexQueryMock->shouldReceive('getData')->once();
-        $this->app()->instance(IndexQuery::class, $indexQueryMock);
+        $this->app->instance(IndexQuery::class, $indexQueryMock);
         $results = $this->get('/user-profiles');
     }
 }

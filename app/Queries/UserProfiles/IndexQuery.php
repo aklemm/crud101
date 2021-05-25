@@ -9,7 +9,7 @@ class IndexQuery
     public function getData()
     {
         return [
-            'UserProfiles' => $this->getUserProfiles(),            
+            'userProfiles' => $this->getUserProfiles(),
         ];
     }
 
